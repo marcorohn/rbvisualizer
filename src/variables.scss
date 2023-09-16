@@ -1,0 +1,25 @@
+$MARGIN_DEFAULT: 15px;
+$NAVBAR_WIDTH: calc(100vw - #{$MARGIN_DEFAULT} - #{$MARGIN_DEFAULT});
+$NAVBAR_HEIGHT: 50px;
+
+$COMPANION_NAV_HEIGHT: 9vh;
+$COMPANION_NAV_TOP: calc(
+  100vh - #{$MARGIN_DEFAULT} - #{$MARGIN_DEFAULT} - #{$NAVBAR_HEIGHT} - #{$COMPANION_NAV_HEIGHT}
+);
+
+$MAT_TOOLBAR_HEIGHT: 64px;
+
+// LEGACY:
+
+$studio-navbar-height: 50px;
+$studio-navbar-width: 100vw;
+
+$studio-sidebar-height: calc(100vh - 50px);
+$studio-sidebar-width: 400px;
+
+$studio-viewer-width: calc(100vw - 600px);
+
+$companion-top-bar-height: 56px;
+$companion-lower-bar-height: 9vh;
+$companion-lower-bar-top: calc(100vh - #{$companion-lower-bar-height});
+$companion-content-height: calc(100vh - #{$companion-top-bar-height} - #{$companion-lower-bar-height});

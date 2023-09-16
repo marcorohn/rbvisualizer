@@ -1,0 +1,17 @@
+.editor {
+  width: 3000px;// 50vw;
+  height: 3000px; // calc(100vh - 4em);
+
+
+  ::ng-deep svg {
+    position: absolute;
+  }
+}
+
+.container {
+  overflow: scroll;
+
+  width: 50vw;
+  height: calc(100vh - 4em);
+  position: relative;
+}

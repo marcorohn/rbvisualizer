@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="exportTree()" [matTooltip]="'Baum exportieren'">
+    <fa-icon [icon]="faFileExport"></fa-icon>
+  </button>
+
+  <!-- links to the file input element, but this looks nicer-->
+  <button mat-icon-button (click)="fileInput.click()" [matTooltip]="'Baum importieren'">
+    <fa-icon [icon]="faFileImport"></fa-icon>
+  </button>
+
+  <!-- actually handle the input-->
+  <input
+    hidden="true"
+    mat-button
+    type="file"
+    (change)="importTree($event)"
+    accept="application/json"
+    id="upload-file-input"
+    #fileInput />
+</mat-toolbar>
+<div class="container">
+  <div #editorDiv class="editor"></div>
+</div>

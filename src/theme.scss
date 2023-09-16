@@ -1,0 +1,147 @@
+@use '@angular/material' as mat;
+@use '@angular/material/theming' as mt;
+@include mat.core();
+
+/* ======== Angular material custom themes ======== */
+
+$av-darkblue-50: (#e3e4e5);
+$av-darkblue-100: (#b9bbbd);
+$av-darkblue-200: (#8a8e91);
+$av-darkblue-300: (#5b6165);
+$av-darkblue-400: (#373f44);
+$av-darkblue-500: (#141d23);
+$av-darkblue-600: (#121a1f);
+$av-darkblue-700: (#0e151a);
+$av-darkblue-800: (#0b1115);
+$av-darkblue-900: (#060a0c);
+$av-darkblue-A100: (#51c1ff);
+$av-darkblue-A200: (#1eafff);
+$av-darkblue-A400: (#0097ea);
+$av-darkblue-A700: (#0087d0);
+
+$av-special-gray: (#212121);
+$av-special-gray-lighter: (#4d4d4d);
+$av-special-gray-lightest: (#b9bbbd);
+
+$av-warn: (rgba(255,82,33));
+
+$av-nav-color: (#282b2d);
+$av-sidebar-color: (#202324);
+$av-background-color: (#191b1c);
+$av-input-color: (#282b2d);
+$av-header-color: (#282b2d);
+$av-button-color: (#282b2d);
+$av-button-hl-color: (#1d5d9c);
+
+$av-darkblue: (
+  50: $av-darkblue-50,
+  100: $av-darkblue-100,
+  200: $av-darkblue-200,
+  300: $av-darkblue-300,
+  400: $av-darkblue-400,
+  500: $av-darkblue-500,
+  600: $av-darkblue-600,
+  700: $av-darkblue-700,
+  800: $av-darkblue-800,
+  900: $av-darkblue-900,
+  A100: $av-darkblue-A100,
+  A200: $av-darkblue-A200,
+  A400: $av-darkblue-A400,
+  A700: $av-darkblue-A700,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$av-lightblue-50: (#e1f5fe);
+$av-lightblue-100: (#b3e5fc);
+$av-lightblue-200: (#81d4fa);
+$av-lightblue-300: (#4fc3f7);
+$av-lightblue-400: (#29b6f6);
+$av-lightblue-500: (#03a9f4);
+$av-lightblue-600: (#03a2f3);
+$av-lightblue-700: (#03a2f3);
+$av-lightblue-800: (#028fef);
+$av-lightblue-900: (#017eec);
+$av-lightblue-A100: (#ffffff);
+$av-lightblue-A200: (#e0efff);
+$av-lightblue-A400: (#add4ff);
+$av-lightblue-A700: (#93c7ff);
+
+$av-lightblue: (
+  50: $av-lightblue-50,
+  100: $av-lightblue-100,
+  200: $av-lightblue-200,
+  300: $av-lightblue-300,
+  400: $av-lightblue-400,
+  500: $av-lightblue-500,
+  600: $av-lightblue-600,
+  700: $av-lightblue-700,
+  800: $av-lightblue-800,
+  900: $av-lightblue-900,
+  A100: $av-lightblue-A100,
+  A200: $av-lightblue-A200,
+  A400: $av-lightblue-A400,
+  A700: $av-lightblue-A700,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$av-primary-d: mat.define-palette($av-darkblue, 50, A700, 900);
+$av-accent-d: mat.define-palette($av-lightblue, 500, 100, 700);
+
+$av-primary-l: mat.define-palette($av-lightblue, 50, A700, 900);
+$av-accent-l: mat.define-palette($av-darkblue, 500, 100, 700);
+//$av-warn: mat-palette($mat-lime); //Optional
+
+//$amber-prim: mat.define-palette(mat.$amber-palette);
+//$amber-accent: mat.define-palette(mat.$cyan-palette);
+//$test: mat.define-light-theme($amber-prim $amber-accent);
+
+$av-darktheme: mat.define-dark-theme($av-primary-d, $av-accent-d);
+$av-lighttheme: mat.define-light-theme($av-primary-l, $av-accent-l);
+//@include mat.angular-material-theme($av-darktheme);
+@include mat.all-component-themes($av-darktheme);
+
+//$glacyr-primary: mat.define-palette(mat.$indigo-palette);
+//$glacyr-accent: mat.define-palette(mat.$amber-palette, 900, A100, A400);
+
+// The warn palette is optional (defaults to red).
+//$glacyr-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+/*$glacyr-theme: mat.define-light-theme((
+  color: (
+    primary: $glacyr-primary,
+    accent: $glacyr-accent,
+    warn: $glacyr-warn,
+  )
+));*/

@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
+    "strictTemplates ": true
+  },
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "es2020",
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2020", "dom"],
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules"]
+}

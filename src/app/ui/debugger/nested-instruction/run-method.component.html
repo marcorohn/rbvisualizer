@@ -1,0 +1,8 @@
+<button
+  *ngIf="instruction.isTopLevel && instruction.userRunnable"
+  mat-icon-button
+  [disabled]="!(ready$ | async)"
+  (click)="runMethod(instruction)"
+  [matTooltip]="'Run Method'">
+  <fa-icon [icon]="faPlay"></fa-icon>
+</button>
