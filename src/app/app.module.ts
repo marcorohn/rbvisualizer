@@ -13,7 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { StaticInjector } from '../util/lifecycle/static-injector';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DeviceDetectorService } from 'ngx-device-detector';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { Title } from '@angular/platform-browser';
 import { UiModule } from './ui/ui.module';
@@ -50,7 +49,6 @@ import { GlobalErrorHandler } from './global-error-handler';
 export class AppModule {
   public constructor(
     private readonly injector: Injector,
-    private readonly device: DeviceDetectorService,
     private readonly titleService: Title
   ) {
     StaticInjector.init(injector);
